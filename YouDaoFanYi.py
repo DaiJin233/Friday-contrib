@@ -74,6 +74,6 @@ class Plugin(AbstractPlugin):
         else:
             self.say(u"没有听清楚 请重试", cache=True)
 
-
+#单一关键词
     def isValid(self, text, parsed):
         return u"翻译" in text
