@@ -43,7 +43,7 @@ class MusicPlayer():
         self.play()
 
     def stop(self):
-        self.mic.setImmersiveMode(None)  # 去掉沉浸式
+        self.mic.setImmersiveMode(None)  # 去掉沉浸式，播放期间较难响应唤醒词
         
     def download_mp3_by_link(self, song_info):
         logger.debug("begin DownLoad {}" % (song_info))
