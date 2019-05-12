@@ -17,7 +17,7 @@ class Plugin(AbstractPlugin):
     def onAsk(self, input, app_key, adcode):
 
         if input is None:
-            input = "龙岗大道"
+            input = "恒祥北大街"
 
         url_transit = "http://restapi.amap.com/v3/traffic/status/road"
         params = {"adcode" : adcode,"name" : input,"key" : app_key}
