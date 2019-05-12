@@ -20,6 +20,8 @@ class Plugin(AbstractPlugin):
             self.say(u'抱歉，无法获取处理器温度', cache=True)
         return result
 
+    
+    #通过os.popen()管道执行终端指令，获取返回值
     def getRAMinfo(self):
         p = os.popen('free')
         i = 0
