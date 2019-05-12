@@ -4,7 +4,7 @@ import requests
 from robot import config, logging
 from robot.sdk.AbstractPlugin import AbstractPlugin
 logger = logging.getLogger(__name__)
-
+#聚合数据得到的新闻
 class Plugin(AbstractPlugin):
 
     SLUG = "headline_news"
@@ -32,7 +32,7 @@ class Plugin(AbstractPlugin):
                 self.say(res["reason"], cache=True)
         else:
             self.say(u"新闻接口调用错误", cache=True)
-
+#新闻类型
     def getNewsType(self, text):
         newsTypes = {"头条":"top", "社会":"shehui","国内":"guonei", "国际":"guoji", "娱乐":"yule",
                      "体育":"tiyu", "军事":"junshi", "科技":"keji","财经":"caijing","时尚":"shishang"}
