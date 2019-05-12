@@ -123,6 +123,8 @@ class Plugin(AbstractPlugin):
         song_id_list = self.get_song_list(channel_url)
         music_player = MusicPlayer(song_id_list, self.con, self.SLUG)
 
+        
+#沉浸模式
     def handle(self, text, parsed):
         global music_player
         if not music_player:
