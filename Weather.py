@@ -90,7 +90,7 @@ class Plugin(AbstractPlugin):
             logger.error(e)
             self.say('抱歉，我获取不到天气数据，请稍后再试', cache=True)
 
-
+#天气脚本使用NLU解析，不需设置关键词
     def isValid(self, text, parsed):
         return self.nlu.hasIntent(parsed, 'USER_WEATHER')
 
