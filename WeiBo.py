@@ -49,7 +49,7 @@ class Plugin(AbstractPlugin):
     def isValidImmersive(self, text, parsed):
         return any(self.nlu.hasIntent(parsed, intent) for intent in ['LAST_CONTENT', 'NEXT_CONTENT',
                                                                      'GET_WEIBO', 'EXIT_WEIBO'])
-
+#这个同样使用NLU解析，不设置关键词
     def isValid(self, text, parsed):
         return unit.hasIntent(parsed, 'GET_WEIBO')
 
