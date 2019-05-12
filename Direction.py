@@ -91,6 +91,6 @@ class Plugin(AbstractPlugin):
 
         self.say("去哪里", cache=True, onCompleted=lambda: onAsk(self.activeListen()))
 
-
+#响应关键词
     def isValid(self, text, parsed):
         return any(word in text for word in [u"怎么去", u"线路", u"路线"])
